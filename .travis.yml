@@ -8,3 +8,10 @@ cache:
 script:
   - yarn lint
   - yarn test
+
+deploy:
+  provider: npm
+  email: chris@jaynes.me
+  api_key: $NPM_TOKEN
+  on:
+    tags: true
