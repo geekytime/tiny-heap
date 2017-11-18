@@ -27,6 +27,17 @@ const min = (parent, child) => {
 }
 ```
 
+`min` and `max` implementations are provided on tinyHeap:
+
+```javascript
+const maxHeap = tinyHeap(tinyHeap.max)
+maxHeap.push(1)
+maxHeap.push(2)
+maxHeap.push(3)
+const top = maxHeap.pop()
+// 3
+```
+
 ### push(value)
 
 Pushes a value onto the heap. It will be sifted into position using the `inOrder` function.
@@ -46,4 +57,4 @@ Gets the number of nodes in the heap.
 
 ### all()
 
-Returns the nodes of the heap as an array. Nodes are ordered top to bottom, left to right.
+Returns all of the nodes of the heap as an array. Nodes are ordered top to bottom, left to right.
